@@ -66,7 +66,7 @@ bachelor %>%
   
   ggplot() +
 
-  geom_line(aes(x=Season, y=Rating), color = "Red", size = 1) +
+  geom_line(aes(x=Season, y=Rating), color = "Red", size = 1.1) +
   
   scale_x_continuous(breaks=c(1:22), labels=c(1:22), limits=c(1,22)) +
   
