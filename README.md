@@ -39,7 +39,6 @@ imdbScrape <- function(x){
   rating <- page %>% read_html() %>% html_nodes('.ipl-rating-widget > .ipl-rating-star .ipl-rating-star__rating') %>% html_text() %>% as.data.frame()
   details <- page %>% read_html() %>% html_nodes('.zero-z-index div') %>% html_text() %>% as.data.frame()
   
-  # combining, naming, classifying our variables
   chart <- cbind(name, rating, details)
   names(chart) <- c("Name", "Rating", "Details")
   chart <- as.tibble(chart)
